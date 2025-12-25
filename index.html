@@ -10,13 +10,12 @@
     <div class="snowflakes">
         <div class="snowflake">❅</div><div class="snowflake">❆</div><div class="snowflake">❅</div>
         <div class="snowflake">❆</div><div class="snowflake">❅</div><div class="snowflake">❆</div>
-        <div class="snowflake">❅</div><div class="snowflake">❆</div>
     </div>
 
     <div id="setup-screen" class="modal">
         <div class="modal-content">
             <h2>❄️ Поле Чудес 2025 ❄️</h2>
-            <p>Выберите количество участников:</p>
+            <p>Выберите количество игроков:</p>
             <div class="player-buttons">
                 <button onclick="initGame(2)">2 Игрока</button>
                 <button onclick="initGame(3)">3 Игрока</button>
@@ -32,11 +31,11 @@
         <div class="controls">
             <div id="wheel" class="wheel">КРУТИТЬ</div>
             <div class="input-area">
-                <input type="text" id="letter-input" maxlength="1" placeholder="?" autocomplete="off">
+                <input type="text" id="letter-input" maxlength="1" placeholder="?">
                 <button onclick="guessLetter()">ОК</button>
             </div>
         </div>
-        <p id="status-message">Крутите барабан!</p>
+        <p id="status-message">Начните игру!</p>
         <div id="score-panel" class="score-panel"></div>
         <button id="restart-btn" onclick="location.reload()" style="display:none;">ИГРАТЬ СНОВА</button>
     </div>
