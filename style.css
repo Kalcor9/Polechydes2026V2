@@ -1,18 +1,15 @@
 body {
-    font-family: 'Segoe UI', Tahoma, sans-serif;
+    font-family: 'Segoe UI', sans-serif;
     background: radial-gradient(circle, #1a2a6c, #b21f1f);
     color: white; margin: 0; padding: 10px;
     display: flex; justify-content: center; align-items: center; min-height: 100vh;
     overflow: hidden;
 }
-
 .game-container {
     background: rgba(0, 0, 0, 0.7); backdrop-filter: blur(10px);
-    padding: 20px; border-radius: 20px; width: 100%; max-width: 450px;
-    text-align: center; border: 2px solid #f1c40f; box-shadow: 0 0 30px rgba(0,0,0,0.5);
+    padding: 20px; border-radius: 20px; width: 100%; max-width: 480px;
+    text-align: center; border: 2px solid gold; box-shadow: 0 0 20px rgba(0,0,0,0.5);
 }
-
-/* Модальное окно выбора игроков */
 .modal {
     position: fixed; z-index: 100; left: 0; top: 0; width: 100%; height: 100%;
     background: rgba(0,0,0,0.9); display: flex; align-items: center; justify-content: center;
@@ -21,39 +18,33 @@ body {
     background: #fff; color: #333; padding: 30px; border-radius: 20px; text-align: center;
 }
 .player-buttons button {
-    margin: 10px; padding: 15px 25px; background: #e74c3c; border: none;
-    color: white; border-radius: 10px; cursor: pointer; font-weight: bold;
+    margin: 5px; padding: 12px 20px; background: #e74c3c; border: none;
+    color: white; border-radius: 8px; cursor: pointer; font-weight: bold;
 }
-
 #current-player-display {
-    font-size: 22px; font-weight: bold; color: #f1c40f; margin-bottom: 15px;
-    padding: 10px; border: 2px solid #f1c40f; border-radius: 10px; background: rgba(255,255,255,0.1);
+    font-size: 20px; font-weight: bold; color: #f1c40f; margin-bottom: 15px;
+    padding: 10px; border: 2px solid #f1c40f; border-radius: 10px;
 }
-
-.word-display { display: flex; justify-content: center; flex-wrap: wrap; gap: 8px; margin: 20px 0; }
+.word-display { display: flex; justify-content: center; flex-wrap: wrap; gap: 5px; margin: 15px 0; }
 .letter-slot {
-    width: 35px; height: 45px; background: #fff; color: #1a2a6c;
-    font-size: 24px; font-weight: bold; display: flex; align-items: center;
-    justify-content: center; border-radius: 5px; box-shadow: inset 0 -3px #ccc;
+    width: 32px; height: 42px; background: #fff; color: #1a2a6c;
+    font-size: 20px; font-weight: bold; display: flex; align-items: center;
+    justify-content: center; border-radius: 4px; border-bottom: 3px solid #bdc3c7;
 }
-
 .wheel {
-    width: 120px; height: 120px; background: conic-gradient(#e74c3c, #f1c40f, #2ecc71, #3498db, #9b59b6, #e74c3c);
-    border-radius: 50%; margin: 20px auto; display: flex; align-items: center;
-    justify-content: center; border: 6px solid gold; cursor: pointer;
-    transition: transform 2s cubic-bezier(0.1, 0.7, 0.1, 1); font-size: 14px;
-    font-weight: bold; text-shadow: 1px 1px 2px black;
+    width: 110px; height: 110px; background: conic-gradient(#e74c3c, #f1c40f, #2ecc71, #3498db, #9b59b6, #e74c3c);
+    border-radius: 50%; margin: 15px auto; display: flex; align-items: center;
+    justify-content: center; border: 5px solid gold; cursor: pointer;
+    transition: transform 2s cubic-bezier(0.1, 0.7, 0.1, 1); font-size: 12px; font-weight: bold;
 }
-
 .score-panel {
-    display: flex; justify-content: space-around; margin-top: 25px;
-    background: rgba(255,255,255,0.15); padding: 10px; border-radius: 12px;
+    display: flex; justify-content: space-around; margin-top: 20px;
+    background: rgba(255,255,255,0.1); padding: 10px; border-radius: 10px;
 }
-.player-score { font-size: 14px; opacity: 0.7; }
-.active-score { opacity: 1; color: #f1c40f; font-weight: bold; border-bottom: 2px solid #f1c40f; }
-
-input { width: 60px; height: 50px; font-size: 26px; text-align: center; border-radius: 10px; border: none; margin-right: 5px; }
-.input-area button { height: 50px; padding: 0 25px; background: #27ae60; color: #fff; border: none; border-radius: 10px; cursor: pointer; font-weight: bold; }
-
-.snowflake { position: fixed; top: -10%; color: white; animation: fall 10s linear infinite; z-index: -1; pointer-events: none; }
+.player-score { font-size: 13px; opacity: 0.6; }
+.active-score { opacity: 1; color: #f1c40f; font-weight: bold; text-decoration: underline; }
+.input-area { display: flex; justify-content: center; gap: 10px; margin: 15px 0; }
+input { width: 50px; height: 45px; font-size: 24px; text-align: center; border-radius: 8px; border: none; }
+button { background: #27ae60; color: white; border: none; padding: 0 20px; border-radius: 8px; font-weight: bold; cursor: pointer; }
+.snowflake { position: fixed; top: -10%; color: white; animation: fall 10s linear infinite; z-index: -1; }
 @keyframes fall { to { top: 110%; transform: rotate(360deg); } }
